@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>復健科林羿辰醫師 - 宸新復健科診所院長 | 專業骨科復健衛教</title>
+    <meta name="description" content="新竹宸新復健科診所院長林羿辰醫師，台大醫學系雙專科醫師，提供專業的骨科復健、增生療法與運動治療衛教資訊。">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (Updated to 6.5.1 for Threads icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts: Noto Sans TC (Content) & Exo 2 (Tech headers) -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        tech: ['Exo 2', 'sans-serif'],
+                    },
+                    colors: {
+                        tech: {
+                            bg: '#0f172a', /* Slate 900 */
+                            card: '#1e293b', /* Slate 800 */
+                            accent: '#06b6d4', /* Cyan 500 */
+                            glow: '#22d3ee', /* Cyan 400 */
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(34, 211, 238, 0.5)',
+                        'neon-hover': '0 0 20px rgba(34, 211, 238, 0.8)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 20%);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* Animation for fade in */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Nav active state */
+        .nav-btn.active {
+            color: #22d3ee;
+            border-bottom: 2px solid #22d3ee;
+            text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+        }
+
+        /* Image hover zoom effect */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom-container img { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .img-zoom-container:hover img { transform: scale(1.15); }
+    </style>
+
+    <!-- Schema.org Person & WebSite Definition -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "林羿辰醫師",
+      "medicalSpecialty": ["Physical Medicine and Rehabilitation", "Orthopedics"],
+      "jobTitle": "院長",
+      "affiliation": {
+        "@type": "MedicalOrganization",
+        "name": "宸新復健科診所"
+      },
+      "alumniOf": "國立台灣大學醫學系",
+      "url": "https://www.facebook.com/Dr.LinRehab" 
+    }
+    </script>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Tech Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg shadow-cyan-900/20">
+        <div class="container mx-auto px-4">
+            
+            <!-- Row 1: Logo & Socials -->
+            <div class="relative flex items-center justify-between py-3 border-b border-slate-800/50 min-h-[60px]">
+                
+                <!-- Center: Logo -->
+                <div class="flex items-center gap-3 group cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2 z-10" onclick="switchTab('about')">
+                    <img src="https://duk.tw/iHBaCj.png" alt="宸新復健科診所 Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-cyan-400 shadow-neon group-hover:shadow-neon-hover transition-all duration-300">
+                    <div class="text-left">
+                        <h1 class="text-lg md:text-2xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 leading-tight">
+                            宸新復健科診所
+                        </h1>
+                        <p class="text-[10px] md:text-xs text-slate-400 tracking-wider">復健科林羿辰醫師 - 院長</p>
+                    </div>
+                </div>
+
+                <!-- Right: Social Icons -->
+                <div class="flex items-center gap-2 ml-auto z-20">
+                    <button onclick="switchTab('about')" title="回到首頁" class="w-8 h-8 rounded-full bg-slate-800 text-cyan-400 border border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)] hover:shadow-neon hover:bg-slate-700 transition-all flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                    <a href="https://www.facebook.com/DrYiChen" target="_blank" title="Facebook" class="w-8 h-8 rounded-full bg-[#1877F2] border border-[#1877F2] text-white shadow-[0_0_10px_rgba(24,119,242,0.4)] hover:bg-[#166fe5] hover:shadow-[0_0_15px_rgba(24,119,242,0.7)] transition-all flex items-center justify-center text-xs">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dryichen/" target="_blank" title="Instagram" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-[0_0_10px_rgba(220,39,67,0.4)] hover:shadow-[0_0_15px_rgba(220,39,67,0.7)] hover:opacity-90 transition-all flex items-center justify-center border-none text-xs">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" title="Threads" class="w-8 h-8 rounded-full bg-white text-black shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-slate-200 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition-all flex items-center justify-center border-none text-xs">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Row 2: Navigation (Buttons Only, No Dropdowns) -->
+            <nav class="w-full overflow-x-auto xl:overflow-visible py-2 desktop-overflow-visible text-center">
+                <ul class="inline-flex justify-center min-w-max gap-1 p-1 bg-slate-800/30 rounded-full">
+                    <li><button onclick="switchTab('about')" id="nav-about" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all active">醫師介紹</button></li>
+                    <li><button onclick="switchTab('treatments')" id="nav-treatments" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">治療方式</button></li>
+                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">脊椎</button></li>
+                    <li><button onclick="switchTab('shoulder')" id="nav-shoulder" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">肩膀</button></li>
+                    <li><button onclick="switchTab('elbow')" id="nav-elbow" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">手肘</button></li>
+                    <li><button onclick="switchTab('hand')" id="nav-hand" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">手部</button></li>
+                    <li><button onclick="switchTab('hip')" id="nav-hip" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">髖臀</button></li>
+                    <li><button onclick="switchTab('knee')" id="nav-knee" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">膝蓋</button></li>
+                    <li><button onclick="switchTab('ankle')" id="nav-ankle" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">足踝</button></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="container mx-auto px-4 py-8 flex-grow relative">
+
+        <!-- ==================== TAB: 醫師介紹 (About) ==================== -->
+        <section id="about" class="tab-content fade-in block">
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-slate-800/60 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl relative">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2/5 relative">
+                            <div class="h-full w-full min-h-[400px] md:min-h-[500px]">
+                                <img src="https://duk.tw/UXXvK3.jpg" alt="林羿辰醫師" class="absolute inset-0 w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center relative z-10">
+                            <h2 class="text-4xl font-bold font-tech text-white mb-2">林羿辰 <span class="text-xl text-cyan-400">醫師</span></h2>
+                            <p class="text-lg text-slate-300 mb-6 border-l-4 border-cyan-500 pl-4">新竹宸新復健科診所院長</p>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-graduation-cap mr-2"></i>學歷與資格</h3>
+                                    <ul class="space-y-2 text-slate-300">
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>國立台灣大學醫學系</li>
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>雙專科醫師 (復健專科 + 骨鬆專科)</li>
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>ACE-CPT 美國運動學會國際私人教練認證</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-briefcase mr-2"></i>經歷</h3>
+                                    <ul class="space-y-2 text-slate-300">
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>馬偕紀念醫院 主治醫師</li>
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣復健醫學會 會員</li>
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣增生療法醫學會 會員</li>
+                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣大學網球校隊</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-6 border-t border-slate-700">
+                                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-envelope mr-2"></i>合作邀約</h3>
+                                    <p class="text-slate-400 text-sm">可私訊粉專或 Email 聯繫：<br><a href="mailto:patrioticman123@gmail.com" class="text-white hover:text-cyan-400 transition-colors font-mono mt-1 inline-block">patrioticman123@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 治療方式 ==================== -->
+        <section id="treatments" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-notes-medical text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">治療方式 <span class="text-slate-500 text-lg font-normal">Treatments</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('prp')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300">增生療法 / PRP</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">透過注射高濃度血小板血漿 (PRP) 或高濃度葡萄糖，啟動身體修復機制，強化肌腱與韌帶強度。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">適用症狀</h4><p class="text-slate-400 text-sm">退化性關節炎、旋轉肌袖撕裂、網球肘。</p></div>
+                </article>
+                <article onclick="openDetail('shockwave')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300">聚焦式/擴散式震波</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">非侵入性的治療方式，利用高能量聲波震動，促進微血管新生與組織再生。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">適用症狀</h4><p class="text-slate-400 text-sm">鈣化性肌腱炎、足底筋膜炎、長期肌肉緊繃。</p></div>
+                </article>
+                <article onclick="openDetail('exercise')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300">一對一運動治療</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">結合醫學與運動科學，由醫師與治療師規劃專屬訓練，矯正錯誤姿勢。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">特色</h4><p class="text-slate-400 text-sm">動作控制訓練、肌力強化、術後功能回復。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 脊椎 (Spine) ==================== -->
+        <section id="spine" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-server text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">脊椎問題 <span class="text-slate-500 text-lg font-normal">Spine Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('herniation')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">腰椎椎間盤突出</h3>
+                    <p class="text-slate-400 text-sm mb-4">椎間盤髓核擠出壓迫神經，造成腰痛或下肢麻痛。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">久坐搬重物是主因，嚴重時需微創手術。</p></div>
+                </article>
+                <article onclick="openDetail('sciatica')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">坐骨神經痛</h3>
+                    <p class="text-slate-400 text-sm mb-4">疼痛從下背部放射至臀部、大腿後側甚至腳底。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">一種症狀，需找出壓迫源頭（骨刺或肌肉）。</p></div>
+                </article>
+                <article onclick="openDetail('stenosis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">脊椎狹窄症</h3>
+                    <p class="text-slate-400 text-sm mb-4">老化導致骨刺與韌帶肥厚，典型症狀為「間歇性跛行」。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">走不遠就需要坐下休息，好發於長輩。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 肩膀 (Shoulder) ==================== -->
+        <section id="shoulder" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-person-arrow-up-from-line text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">肩膀問題 <span class="text-slate-500 text-lg font-normal">Shoulder Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('frozen-shoulder')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">五十肩</h3>
+                    <p class="text-slate-400 text-sm mb-4">沾黏性肩關節囊炎，手舉不高、夜間疼痛明顯。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">積極做爬牆運動、關節授動術。</p></div>
+                </article>
+                <article onclick="openDetail('rotator-cuff')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">旋轉肌袖破裂</h3>
+                    <p class="text-slate-400 text-sm mb-4">負責抬手的肌腱斷裂，導致手臂無力（不舉）。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">PRP修復部分撕裂，全層斷裂需關節鏡縫合。</p></div>
+                </article>
+                <article onclick="openDetail('calcific')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">鈣化性肌腱炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">鈣質沈積如牙膏狀，急性期痛到想把手剁掉。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">體外震波治療效果佳，通常不需開刀。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 手肘 (Elbow) ==================== -->
+        <section id="elbow" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-baseball-bat-ball text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">手肘問題 <span class="text-slate-500 text-lg font-normal">Elbow Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('tennis-elbow')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">網球肘</h3>
+                    <p class="text-slate-400 text-sm mb-4">手肘「外側」痛，擰毛巾無力。常見於家庭主婦。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">提重物時掌心向上（反手），配戴護肘。</p></div>
+                </article>
+                <article onclick="openDetail('golf-elbow')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">高爾夫球肘</h3>
+                    <p class="text-slate-400 text-sm mb-4">手肘「內側」痛，負責手腕彎曲的肌腱發炎。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">冰敷、伸展運動，減少手腕出力。</p></div>
+                </article>
+                <article onclick="openDetail('cubital')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">肘隧道症候群</h3>
+                    <p class="text-slate-400 text-sm mb-4">尺神經受壓迫，小指無名指麻木，虎口肌肉萎縮。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">若肌肉開始萎縮需盡快手術減壓。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 手部 (Hand) ==================== -->
+        <section id="hand" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-hand text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">手部問題 <span class="text-slate-500 text-lg font-normal">Hand Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('mommy-thumb')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">媽媽手</h3>
+                    <p class="text-slate-400 text-sm mb-4">大拇指側手腕疼痛，抱小孩或滑手機時加劇。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">配戴拇指護具、局部注射。</p></div>
+                </article>
+                <article onclick="openDetail('trigger-finger')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">板機指</h3>
+                    <p class="text-slate-400 text-sm mb-4">手指彎曲後卡住伸不直，用力扳開會「喀」一聲。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">震波治療、微創針挑手術。</p></div>
+                </article>
+                <article onclick="openDetail('carpal-tunnel')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">腕隧道症候群</h3>
+                    <p class="text-slate-400 text-sm mb-4">大拇指、食指與中指麻木刺痛，甩手後會改善。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">夜間副木固定、神經解離手術。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 髖臀 (Hip) ==================== -->
+        <section id="hip" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-bone text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">髖臀問題 <span class="text-slate-500 text-lg font-normal">Hip Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('hip-oa')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">退化性髖關節炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">鼠蹊部疼痛，走路跛行，盤腿或穿襪子困難。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">減重、肌力訓練、人工關節置換。</p></div>
+                </article>
+                <article onclick="openDetail('piriformis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">梨狀肌症候群</h3>
+                    <p class="text-slate-400 text-sm mb-4">深層臀部疼痛，常被誤認為坐骨神經痛。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">臀部伸展、震波放鬆深層肌肉。</p></div>
+                </article>
+                <article onclick="openDetail('bursitis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">大轉子滑囊炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">髖關節外側疼痛，側睡壓到會痛醒。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">局部注射、滾筒放鬆大腿外側。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 膝蓋 (Knee) ==================== -->
+        <section id="knee" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-person-walking text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">膝蓋關節 <span class="text-slate-500 text-lg font-normal">Knee Joint</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('knee-oa')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">退化性膝關節炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">軟骨磨損，上下樓梯無力、僵硬變形。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">減重是首要任務。另可施打玻尿酸、PRP。</p></div>
+                </article>
+                <article onclick="openDetail('meniscus')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">半月板破裂</h3>
+                    <p class="text-slate-400 text-sm mb-4">膝蓋緩衝墊破裂，導致腫脹或「卡住」無法伸直。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">年輕人優先修補，嚴重者需部分切除。</p></div>
+                </article>
+                <article onclick="openDetail('acl')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">前十字韌帶斷裂</h3>
+                    <p class="text-slate-400 text-sm mb-4">運動急停聽到「啪」一聲，之後常感到腿軟不穩。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">若要重回高強度運動，需進行韌帶重建手術。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 足踝 (Ankle) ==================== -->
+        <section id="ankle" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-shoe-prints text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">足踝問題 <span class="text-slate-500 text-lg font-normal">Foot & Ankle Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('plantar')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">足底筋膜炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">下床第一步最痛。久站久走後疼痛加劇。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">踩網球按摩足底，毛巾拉小腿筋。</p></div>
+                </article>
+                <article onclick="openDetail('sprain')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">踝關節扭傷</h3>
+                    <p class="text-slate-400 text-sm mb-4">俗稱翻船。外側韌帶拉傷導致腫脹。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">急性期RICE原則。慢性需訓練本體感覺。</p></div>
+                </article>
+                <article onclick="openDetail('achilles')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">阿基里斯腱發炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">腳跟上方腫脹痛，墊腳尖會痛。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500"><h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4><p class="text-slate-400 text-sm">絕對不可打類固醇，易導致斷裂。</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== DETAILED VIEWS (子頁面) ==================== -->
+        
+        <!-- Template Function for Details (Example: Frozen Shoulder) -->
+        <section id="detail-frozen-shoulder" class="tab-content hidden fade-in">
+            <button onclick="switchTab('shoulder')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回肩膀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">五十肩 <span class="text-lg text-cyan-400">Frozen Shoulder</span></h1>
+                    <p class="text-slate-400">沾黏性肩關節囊炎 (Adhesive Capsulitis)</p>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">五十肩並非五十歲人的專利，而是一種肩關節囊發炎、增厚並產生沾黏的疾病。患者常感覺肩膀像是被「凍結」了一樣，活動角度受限，嚴重時連梳頭、扣內衣背扣都變得困難，且夜間翻身壓到患側會痛醒。</div>
+                <div class="grid md:grid-cols-2 gap-8 mb-8"><div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700"><h4 class="text-xl font-bold text-white mb-4">常見成因</h4><ul class="space-y-2 text-slate-300 list-disc list-inside"><li>原發性：原因不明。</li><li>繼發性：糖尿病、甲狀腺疾病。</li><li>外傷後：肩膀受傷後長期不敢活動。</li></ul></div><div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700"><h4 class="text-xl font-bold text-white mb-4">治療建議</h4><ul class="space-y-2 text-slate-300 list-disc list-inside"><li>藥物：口服消炎藥。</li><li>復健：熱敷、電療、徒手治療。</li><li>運動：爬牆運動、毛巾操 (關鍵)。</li></ul></div></div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-brands fa-youtube text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">相關教學影片</h4><p class="text-slate-500 text-sm">（此處預留位置，可放置五十肩復健運動影片）</p></div>
+            </div>
+        </section>
+
+        <!-- Repeat Structure for Other Details -->
+        <!-- Treatments -->
+        <section id="detail-prp" class="tab-content hidden fade-in">
+            <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回治療方式</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">增生療法 / PRP</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">利用高濃度葡萄糖或自體血小板血漿 (PRP)，注射到受傷的肌腱或韌帶，啟動身體修復機制，強化組織強度。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">治療示意圖/影片</h4></div>
+            </div>
+        </section>
+        
+        <section id="detail-shockwave" class="tab-content hidden fade-in">
+            <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回治療方式</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">聚焦式/擴散式震波</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">非侵入性的治療，利用高能量聲波，促進微血管新生，對於鈣化性肌腱炎與足底筋膜炎有顯著效果。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">治療示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <section id="detail-exercise" class="tab-content hidden fade-in">
+            <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回治療方式</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">一對一運動治療</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">由專業治療師進行動作評估，針對弱點進行肌力強化與姿勢矯正，從根本解決疼痛問題。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">治療示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Spine Details -->
+        <section id="detail-herniation" class="tab-content hidden fade-in">
+            <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回脊椎列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">腰椎椎間盤突出</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">椎間盤的髓核擠出，壓迫到神經根，導致下背痛、臀部痛，甚至延伸到腿部的麻痛。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">解剖示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-sciatica" class="tab-content hidden fade-in">
+            <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回脊椎列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">坐骨神經痛</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">一種沿著坐骨神經路徑（腰、臀、腿後）產生的疼痛症狀，可能源自椎間盤突出、骨刺或梨狀肌症候群。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-stenosis" class="tab-content hidden fade-in">
+            <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回脊椎列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">脊椎狹窄症</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">隨著老化，脊椎骨刺增生與黃韌帶肥厚，導致脊髓腔變窄。特色是「間歇性跛行」，走一段路腳會麻無力，蹲下休息會改善。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Shoulder Details (Frozen Shoulder is separate above) -->
+        <section id="detail-rotator-cuff" class="tab-content hidden fade-in">
+            <button onclick="switchTab('shoulder')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回肩膀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">旋轉肌袖破裂</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">負責肩膀旋轉與抬起的肌腱撕裂。特色是主動抬手無力（不舉），但別人幫忙抬可以抬起來。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-calcific" class="tab-content hidden fade-in">
+            <button onclick="switchTab('shoulder')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回肩膀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">鈣化性肌腱炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">鈣質沈積在肌腱內，急性發作時疼痛指數極高，患者常形容痛到想把手剁掉。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Elbow Details -->
+        <section id="detail-tennis-elbow" class="tab-content hidden fade-in">
+            <button onclick="switchTab('elbow')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手肘列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">網球肘</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">手肘外側疼痛，主要是伸腕肌腱發炎。常見於家庭主婦、廚師等需反覆使用手腕的人。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-golf-elbow" class="tab-content hidden fade-in">
+            <button onclick="switchTab('elbow')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手肘列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">高爾夫球肘</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">手肘內側疼痛，主要是屈腕肌腱發炎。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-cubital" class="tab-content hidden fade-in">
+            <button onclick="switchTab('elbow')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手肘列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">肘隧道症候群</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">尺神經在手肘內側受壓迫，導致無名指與小指麻木，嚴重時虎口肌肉萎縮。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Hand Details -->
+        <section id="detail-mommy-thumb" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hand')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手部列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">媽媽手</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">大拇指側手腕疼痛，常發生在新手媽媽抱小孩或過度滑手機的人身上。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-trigger-finger" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hand')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手部列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">板機指</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">手指彎曲後卡住伸不直，用力扳開會「喀」一聲，是肌腱鞘發炎腫脹所致。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-carpal-tunnel" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hand')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回手部列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">腕隧道症候群</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">正中神經在手腕處受壓迫，造成大拇指、食指與中指麻木刺痛，甩手後會改善。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Hip Details -->
+        <section id="detail-hip-oa" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">退化性髖關節炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">鼠蹊部疼痛是典型症狀，走路會跛行，盤腿或穿襪子等動作會變得困難。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-piriformis" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">梨狀肌症候群</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">深層臀部疼痛，因梨狀肌緊繃壓迫到下方的坐骨神經，常被誤認為椎間盤突出。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-bursitis" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">大轉子滑囊炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">髖關節外側疼痛，特別是側睡壓到患側時會痛醒，常因髂脛束過緊摩擦滑囊引起。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Knee Details -->
+        <section id="detail-knee-oa" class="tab-content hidden fade-in">
+            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">退化性膝關節炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">關節軟骨磨損，導致上下樓梯無力、蹲下站不起來，嚴重時會O型腿變形。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-meniscus" class="tab-content hidden fade-in">
+            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">半月板破裂</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">膝蓋內的緩衝墊破裂，導致膝蓋腫脹、疼痛，甚至會有「卡住」(Locking) 無法伸直的現象。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-acl" class="tab-content hidden fade-in">
+            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">前十字韌帶斷裂</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">常見於急停轉身的運動傷害，受傷當下常聽到「啪」一聲，之後膝蓋會反覆腫脹且感到鬆動不穩。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+        <!-- Ankle Details -->
+        <section id="detail-plantar" class="tab-content hidden fade-in">
+            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">足底筋膜炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">典型症狀是「早上起床踩地第一步最痛」，行走一段時間後緩解，但久站久走後疼痛又加劇。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-sprain" class="tab-content hidden fade-in">
+            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">踝關節扭傷</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">最常見的運動傷害（翻船），通常是腳踝向內翻轉導致外側韌帶拉傷或斷裂，造成外踝腫脹瘀血。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+        <section id="detail-achilles" class="tab-content hidden fade-in">
+            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl">
+                    <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">阿基里斯腱發炎</h1>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">連接小腿肌肉與腳跟的粗大肌腱發炎。症狀為腳跟上方腫脹、按壓痛，墊腳尖時疼痛加劇。</div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i><h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4></div>
+            </div>
+        </section>
+
+
+        <!-- ==================== VISUAL NAVIGATION GRID (Bottom) ==================== -->
+        <section id="visual-nav" class="mt-16 pt-12 border-t border-slate-800">
+            <h2 class="text-2xl font-bold font-tech text-white text-center mb-8 tracking-wide">
+                <span class="text-cyan-400">快速</span>導覽
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+                <!-- Images with Enhanced Zoom Effect -->
+                <div onclick="switchTab('treatments')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800" alt="治療方式" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">治療方式</span>
+                    </div>
+                </div>
+                <!-- Spine -->
+                <div onclick="switchTab('spine')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800" alt="脊椎" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">脊椎問題</span>
+                    </div>
+                </div>
+                <!-- Shoulder -->
+                <div onclick="switchTab('shoulder')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1552196527-bffef41ef674?q=80&w=800" alt="肩膀" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">肩膀問題</span>
+                    </div>
+                </div>
+                <!-- Hand -->
+                <div onclick="switchTab('hand')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1606902965551-dce878fd19a9?q=80&w=800" alt="手部" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">手部問題</span>
+                    </div>
+                </div>
+                <!-- Knee -->
+                <div onclick="switchTab('knee')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=800" alt="膝蓋" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">膝蓋關節</span>
+                    </div>
+                </div>
+                <!-- Ankle -->
+                <div onclick="switchTab('ankle')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1540917208756-3f147986f32e?q=80&w=800" alt="足踝" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold group-hover:text-cyan-400 transition-colors">足踝問題</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Tech Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 text-xs">
+                &copy; 2024 宸新復健科診所 林羿辰醫師. All Rights Reserved.<br>
+                <span class="text-slate-600">本網站內容僅供衛教參考，不能取代專業醫師診斷。</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Tab Switching Logic -->
+    <script>
+        // 1. 切換主要分頁
+        function switchTab(tabId) {
+            // Hide all main sections & detail sections
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('fade-in'); 
+            });
+
+            // Show target section
+            const targetSection = document.getElementById(tabId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+                void targetSection.offsetWidth; // Trigger reflow
+                targetSection.classList.add('fade-in');
+            }
+
+            // Update Nav Buttons State
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                // Remove active styles
+                btn.classList.remove('active', 'text-cyan-400', 'border-b-2', 'border-cyan-400', 'shadow-neon');
+                btn.classList.add('text-slate-300');
+            });
+
+            // Highlight active button (if exists for this ID)
+            const activeBtn = document.getElementById('nav-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'text-cyan-400', 'border-b-2', 'border-cyan-400');
+                activeBtn.classList.remove('text-slate-300');
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 2. 開啟詳細頁面 (Detail View)
+        function openDetail(detailId) {
+            // Hide all tab contents (including current category view)
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the specific detail section
+            const detailSection = document.getElementById('detail-' + detailId);
+            if (detailSection) {
+                detailSection.classList.remove('hidden');
+                void detailSection.offsetWidth; 
+                detailSection.classList.add('fade-in');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                console.error("Detail section not found: " + detailId);
+                // Fallback: Show alert or do nothing
+                alert("此頁面內容建置中...");
+            }
+        }
+
+        // Initialize: Ensure only About is shown
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('about');
+        });
+    </script>
+</body>
+</html>
