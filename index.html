@@ -197,33 +197,88 @@
             </div>
 
             <!-- Clinic Info & Reviews -->
-            <div class="max-w-5xl mx-auto">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-hospital text-xl"></i></span>
-                    <h2 class="text-3xl font-bold font-tech text-white">診所資訊 <span class="text-slate-500 text-lg font-normal">Clinic Info</span></h2>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 mb-12 shadow-lg">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-white">新竹市宸新復健科</h3>
-                            <div class="flex items-start gap-3 text-slate-300"><i class="fa-solid fa-location-dot mt-1 text-cyan-400"></i><p>300新竹市東區光復路一段371號B1 (竹科附近)</p></div>
-                            <div class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-phone text-cyan-400"></i><p>(03) 564-7999</p></div>
-                        </div>
-                        <a href="https://maps.app.goo.gl/dSe9zVPgnNV7m3jo9" target="_blank" class="w-full md:w-auto text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:shadow-neon transition-all font-medium"><i class="fa-solid fa-map-location-dot mr-2"></i> 開啟 Google 地圖</a>
+    <div class="max-w-6xl mx-auto w-full">
+        <!-- Section Header -->
+        <div class="flex items-center gap-3 mb-6">
+            <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-hospital text-xl"></i></span>
+            <h2 class="text-3xl font-bold font-tech text-white">診所資訊 <span class="text-slate-500 text-lg font-normal">Clinic Info</span></h2>
+        </div>
+
+        <!-- Content Card -->
+        <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6 md:p-8 mb-12 shadow-lg backdrop-blur-sm">
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                
+                <!-- 1. 左邊放上圖片 -->
+                <div class="lg:w-5/12 flex-shrink-0">
+                    <div class="h-full w-full min-h-[300px] rounded-lg overflow-hidden border border-slate-600 shadow-md relative group">
+                        <!-- SEO優化: alt 屬性加入關鍵字 -->
+                        <img src="https://duk.tw/PLVLuz.png" alt="新竹市宸新復健科 - 提供X光、超音波檢查、PRP注射與體外震波治療" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <!-- 圖片遮罩增加質感 -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                     </div>
                 </div>
 
-                <!-- 6 Selected Reviews -->
-                <h3 class="text-xl font-bold text-slate-300 mb-6 border-l-4 border-yellow-500 pl-3">病患五星好評推薦</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"林醫師非常細心，超音波檢查很仔細，打針技術也很好，我的五十肩終於有改善了！"</p><p class="text-slate-500 text-xs mt-3 text-right">- 陳小姐</p></div>
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"診所環境寬敞明亮，設備都很新，櫃檯人員也很親切，推薦給大家。"</p><p class="text-slate-500 text-xs mt-3 text-right">- 張先生</p></div>
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"之前媽媽手痛很久，來這邊做震波治療效果很顯著，治療師也很專業會教居家運動。"</p><p class="text-slate-500 text-xs mt-3 text-right">- Lin A.</p></div>
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"徒手治療很有感，物理治療師手法到位，解決了我長期的下背痛困擾。"</p><p class="text-slate-500 text-xs mt-3 text-right">- 王大明</p></div>
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"很棒的復健科診所，醫師看診不馬虎，會詳細解說病因，讓人很安心。"</p><p class="text-slate-500 text-xs mt-3 text-right">- Sophie W.</p></div>
-                    <div class="bg-slate-800/30 border border-slate-700/50 p-5 rounded-xl"><div class="flex text-yellow-400 mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-slate-300 text-sm">"運動治療課程很紮實，教練會一對一指導動作，改善了我的體態和核心肌群。"</p><p class="text-slate-500 text-xs mt-3 text-right">- 黃小姐</p></div>
+                <!-- 2. 文字放到右邊 -->
+                <div class="lg:w-7/12 flex flex-col">
+                    
+                    <!-- 標題 -->
+                    <h3 class="text-3xl font-bold text-white mb-6 border-b border-slate-700 pb-4">新竹市宸新復健科</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- 診所特色項目 -->
+                        <div>
+                            <h4 class="text-lg font-bold text-cyan-400 mb-3 font-tech border-l-4 border-cyan-500 pl-3">診所特色項目</h4>
+                            <ul class="space-y-2 text-slate-300 text-sm">
+                                <!-- SEO優化: X光、超音波已存在 -->
+                                <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>醫學中心級數位X光機</li>
+                                <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>頂規高畫質超音波檢查</li>
+                                <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台大醫師團隊</li>
+                            </ul>
+                        </div>
+
+                        <!-- 診所特色治療 -->
+                        <div>
+                            <h4 class="text-lg font-bold text-cyan-400 mb-3 font-tech border-l-4 border-pink-500 pl-3">診所特色治療</h4>
+                            <ul class="space-y-2 text-slate-300 text-sm">
+                                <!-- SEO優化: 加入「體外震波」關鍵字 -->
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>瑞士進口「聚焦式」和「擴散式」體外震波</li>
+                                <!-- SEO優化: 加入「(PRP)」關鍵字 -->
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>瑞士專利進口高純度血小板再生治療 (PRP)</li>
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>美國進口高能量雷射治療儀</li>
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>羊膜注射及骨髓濃縮液 (BMAC)</li>
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>專利韌帶肌腱玻尿酸</li>
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>器械皮拉提斯及紅繩團體運動課程</li>
+                                <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>兒童早療(物理+職能+語言)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. 地址、按鈕與電話 (置底) -->
+                    <div class="mt-auto bg-slate-900/40 p-4 rounded-lg border border-slate-700/50">
+                        <div class="flex flex-col gap-3">
+                            <!-- 地址與按鈕 Row -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="flex items-start gap-3 text-slate-200 font-medium">
+                                    <i class="fa-solid fa-location-dot mt-1 text-cyan-400"></i>
+                                    <p>300新竹市東區光復路一段371號B1 (竹科附近)</p>
+                                </div>
+                                <!-- 保留原本的按鈕 -->
+                                <a href="https://maps.app.goo.gl/dSe9zVPgnNV7m3jo9" target="_blank" class="flex-shrink-0 w-full sm:w-auto text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:shadow-neon transition-all font-medium text-sm">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i> 開啟 Google 地圖
+                                </a>
+                            </div>
+                            <!-- 電話 Row -->
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <i class="fa-solid fa-phone text-cyan-400"></i>
+                                <p class="font-tech tracking-wide text-lg">(03) 564-7999</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </div>
+    </div>
         </section>
 
         <!-- ==================== TAB: 減重與骨齡 (Weight & Bone) ==================== -->
