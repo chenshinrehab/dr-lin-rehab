@@ -386,7 +386,7 @@
                     </div>
                 </article>
 
-                <a href="bone-age.html" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                <article onclick="openDetail('bone-age')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
                     <h3 class="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300">兒童骨齡評估</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">透過左手X光片判讀骨骼成熟度，預測成年身高，掌握黃金生長發育期。</p>
                     <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
@@ -1857,20 +1857,6 @@
         window.addEventListener('DOMContentLoaded', handleHashChange);
         window.addEventListener('hashchange', handleHashChange);
     </script>
-<script>
-    // 當頁面載入時，檢查網址有沒有帶 #about
-    window.onload = function() {
-        var hash = window.location.hash; // 取得 # 後面的字
-        if (hash === '#about') {
-            switchTab('about'); // 如果網址有 #about，就自動執行切換功能
-        }
-        // 如果有其他分頁，也可以依此類推
-        else if (hash === '#weight-loss') {
-            switchTab('weight-loss');
-        }
-    };
-</script>
-    
 </body>
 </html>
 
