@@ -355,7 +355,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article onclick="openDetail('mounjaro')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+               <a href="moun.html" class="block bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
                     <h3 class="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300">猛健樂 (Mounjaro)</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">新一代雙重腸泌素(GIP/GLP-1)受體促效劑，提供更卓越的體重控制效果。</p>
                     <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
@@ -838,39 +838,63 @@
             </div>
         </section>
 
-        <section id="detail-shockwave" class="tab-content hidden fade-in">
-            <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回治療方式</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">聚焦式/擴散式震波</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">非侵入性的治療，利用高能量聲波，促進微血管新生，對於鈣化性肌腱炎與足底筋膜炎有顯著效果。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>足跟痛、足底筋膜炎。</li>
-                            <li>肩膀鈣化性肌腱炎疼痛。</li>
-                            <li>網球肘、高爾夫球肘。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>每週一次，約需 3-5 次療程。</li>
-                            <li>治療後局部可能有輕微腫脹感。</li>
-                            <li>對於慢性軟組織疼痛效果顯著。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">治療示意圖/影片</h4>
-                </div>
+       <section id="detail-eswt" class="tab-content hidden fade-in">
+    <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors">
+        <i class="fa-solid fa-arrow-left"></i> 返回列表
+    </button>
+    
+    <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-6 md:p-8">
+        <!-- Header -->
+        <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
+            <div class="hidden md:block bg-white p-1 rounded-lg shrink-0">
+                <img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code">
             </div>
-        </section>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-1"> <span class="text-lg text-cyan-400 block md:inline md:ml-2"></span></h1>
+            </div>
+        </div>
+
+        <!-- Desc -->
+        <div class="text-slate-300 leading-relaxed text-lg mb-8 border-b border-slate-700 pb-6">
+            ✨新竹宸新復健科，聚焦式及發散式複合式治療<br>體外震波治療 (ESWT) 是一種先進的非侵入性復健技術，廣泛應用於骨科與運動醫學。其原理是利用高能量聲波穿透皮膚，精準聚焦於受損的深層軟組織。<br><br>這股能量能造成組織微創，進而刺激微血管新生、加速新陳代謝並啟動自癒修復機制，甚至能擊碎鈣化組織。臨床上對於足底筋膜炎、網球肘、鈣化性肌腱炎及各類慢性沾黏特別有效。<br><br>一般療程約需 3 至 6 次，具備免開刀、免麻醉、無恢復期的優勢。雖治療時患處會有痠脹感，但能從根源改善傳統物理治療難以緩解的頑固疼痛。
+        </div>
+
+        <!-- Grid -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2">為什麼選擇宸新</h4>
+                <ul class="space-y-3 text-slate-300 list-disc list-inside">
+                    <li>聚焦式及發散式複合式治療</li>
+                    <li>治療前搭配超音波定位 精準打擊</li>
+                    <li>瑞士進口高階體外震波</li>
+                </ul>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2">治療建議</h4>
+                <ul class="space-y-3 text-slate-300 list-disc list-inside">
+                    <li>每週一次，約需 3-5 次療程。</li>
+                    <li>治療後局部可能有輕微腫脹感。</li>
+                    <li>對於慢性軟組織疼痛效果顯著。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Media -->
+        <div class="space-y-6">
+        <div class="mb-8 text-center">
+            <img src="https://duk.tw/SKIlg2.jpg" alt="" class="w-full md:w-2/3 md:mx-auto h-auto rounded-lg mb-2 shadow-md">
+            
+        </div>
+        <div class="mb-8 text-center">
+            <img src="https://duk.tw/NLfOMd.jpg" alt="" class="w-full md:w-2/3 md:mx-auto h-auto rounded-lg mb-2 shadow-md">
+            
+        </div>
+        <div class="mb-8 text-center">
+            <img src="https://duk.tw/oabdyS.jpg" alt="" class="w-full md:w-2/3 md:mx-auto h-auto rounded-lg mb-2 shadow-md">
+            
+        </div></div>
+    </div>
+</section>
 
         <section id="detail-exercise" class="tab-content hidden fade-in">
             <button onclick="switchTab('treatments')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回治療方式</button>
