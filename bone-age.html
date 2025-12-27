@@ -1,96 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>運動教練醫師-林羿辰 | 宸新復健科診所院長</title>
-    <meta name="description" content="新竹宸新復健科診所院長林羿辰醫師，台大醫學系雙專科醫師，提供專業的骨科復健、增生療法與運動治療衛教資訊。">
+    <title>兒童骨齡評估 | 宸新復健科診所</title> <meta name="description" content="新竹宸新復健科診所兒童骨齡評估，免預約、低輻射X光檢測，搭配AI精準判讀成年身高。">
+    
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "新竹宸新復健科診所",
-  "image": "https://duk.tw/iHBaCj.png",
-  "@id": "https://chenshinrehab.github.io/dr-lin-rehab/",
-  "url": "https://chenshinrehab.github.io/dr-lin-rehab/",
-  "telephone": "+886-3-564-7999",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "光復路一段371號B1",
-    "addressLocality": "東區",
-    "addressRegion": "新竹市",
-    "postalCode": "300",
-    "addressCountry": "TW"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 24.783618,
-    "longitude": 121.015243
-  },
-  "openingHoursSpecification": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "新竹宸新復健科診所",
+      "image": "https://duk.tw/iHBaCj.png",
+      "@id": "https://chenshinrehab.github.io/dr-lin-rehab/",
+      "url": "https://chenshinrehab.github.io/dr-lin-rehab/",
+      "telephone": "+886-3-564-7999",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "光復路一段371號B1",
+        "addressLocality": "東區",
+        "addressRegion": "新竹市",
+        "postalCode": "300",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.783618,
+        "longitude": 121.015243
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
       ],
-      "opens": "09:00",
-      "closes": "21:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "12:00"
+      "priceRange": "$$",
+      "medicalSpecialty": ["PhysicalTherapy", "Rehabilitation", "SportsMedicine", "PainManagement"],
+      "founder": {
+        "@type": "Physician",
+        "name": "林羿辰",
+        "jobTitle": "院長"
+      }
     }
-  ],
-  "priceRange": "$$",
-  "medicalSpecialty": [
-    "PhysicalTherapy",
-    "Rehabilitation",
-    "SportsMedicine",
-    "PainManagement"
-  ],
-  "founder": {
-    "@type": "Physician",
-    "name": "林羿辰",
-    "jobTitle": "院長",
-    "description": "新竹宸新復健科診所院長，台大醫學系畢業，具備復健專科與骨鬆專科雙資格，同時為美國運動學會認證教練(ACE-CPT)。",
-    "image": "https://duk.tw/UXXvK3.jpg",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "國立台灣大學醫學系"
-    }
-  },
-  "availableService": [
-    {
-      "@type": "MedicalTherapy",
-      "name": "增生療法 (PRP)"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "兒童骨齡評估"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "體外震波治療"
-    },
-    {
-      "@type": "TherapeuticProcedure",
-      "name": "一對一運動治療"
-    }
-  ]
-}
-</script>
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <script>
@@ -127,73 +90,15 @@
                 radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 20%);
         }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .nav-btn.active {
-            color: #22d3ee;
-            border-bottom: 2px solid #22d3ee;
-            text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
-        }
-
-        .img-zoom-container {
-            overflow: hidden;
-        }
-
-        .img-zoom-container img {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .img-zoom-container:hover img {
-            transform: scale(1.15);
-        }
+        /* 導覽列滾動條樣式 */
+        ::-webkit-scrollbar { width: 8px; height: 4px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom-container img { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .img-zoom-container:hover img { transform: scale(1.15); }
     </style>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Physician",
-            "name": "林羿辰醫師",
-            "medicalSpecialty": ["Physical Medicine and Rehabilitation", "Orthopedics"],
-            "jobTitle": "院長",
-            "affiliation": {
-                "@type": "MedicalOrganization",
-                "name": "宸新復健科診所"
-            },
-            "alumniOf": "國立台灣大學醫學系",
-            "url": "https://www.facebook.com/Dr.LinRehab"
-        }
-    </script>
 </head>
 
 <body class="antialiased min-h-screen flex flex-col">
@@ -203,7 +108,7 @@
 
             <div class="relative flex items-center justify-between py-3 border-b border-slate-800/50 min-h-[60px]">
 
-                <div class="flex items-center gap-3 group cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2 z-10" onclick="switchTab('about')">
+                <a href="index.html" class="flex items-center gap-3 group cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2 z-10 text-decoration-none">
                     <img src="https://duk.tw/iHBaCj.png" alt="新竹宸新復健科診所 Logo" class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-cyan-400 shadow-neon group-hover:shadow-neon-hover transition-all duration-300">
                     <div class="text-left">
                         <h1 class="text-lg md:text-2xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 leading-tight">
@@ -211,51 +116,33 @@
                         </h1>
                         <p class="text-[10px] md:text-xs text-slate-400 tracking-wider">宸新復健科診所院長</p>
                     </div>
-                </div>
+                </a>
 
                 <div class="flex items-center gap-2 ml-auto z-20">
                     <div class="hidden sm:flex items-center gap-2">
-                        <button onclick="switchTab('about')" title="回到首頁" class="w-8 h-8 rounded-full bg-slate-800 text-cyan-400 border border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)] hover:shadow-neon hover:bg-slate-700 transition-all flex items-center justify-center text-xs">
+                        <a href="index.html" title="回到首頁" class="w-8 h-8 rounded-full bg-slate-800 text-cyan-400 border border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)] hover:shadow-neon hover:bg-slate-700 transition-all flex items-center justify-center text-xs">
                             <i class="fa-solid fa-house"></i>
-                        </button>
-                        <a href="https://www.facebook.com/DrYiChen" target="_blank" title="Facebook - 林羿辰醫師" class="w-8 h-8 rounded-full bg-[#1877F2] border border-[#1877F2] text-white shadow-[0_0_10px_rgba(24,119,242,0.4)] hover:bg-[#166fe5] hover:shadow-[0_0_15px_rgba(24,119,242,0.7)] transition-all flex items-center justify-center text-xs">
-                            <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/dryichen/" target="_blank" title="Instagram - 運動醫學日常" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-[0_0_10px_rgba(220,39,67,0.4)] hover:shadow-[0_0_15px_rgba(220,39,67,0.7)] hover:opacity-90 transition-all flex items-center justify-center border-none text-xs">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" title="Threads - 醫師即時動態" class="w-8 h-8 rounded-full bg-white text-black shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-slate-200 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition-all flex items-center justify-center border-none text-xs">
-                            <i class="fa-brands fa-threads"></i>
-                        </a>
-                        <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" title="YouTube - 復健運動教學" class="w-8 h-8 rounded-full bg-[#FF0000] border border-[#FF0000] text-white shadow-[0_0_10px_rgba(255,0,0,0.4)] hover:bg-[#cc0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all flex items-center justify-center border-none text-xs">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
+                        <a href="https://www.facebook.com/DrYiChen" target="_blank" class="w-8 h-8 rounded-full bg-[#1877F2] border border-[#1877F2] text-white flex items-center justify-center text-xs"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
 
             <nav class="w-full overflow-x-auto xl:overflow-visible py-2 desktop-overflow-visible text-center">
                 <ul class="inline-flex justify-center min-w-max gap-1 p-1 bg-slate-800/30 rounded-full">
-
-<li>
-    <a href="index.html#about" 
-       id="nav-about" 
-       class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all active"
-       style="display: inline-block; text-decoration: none; cursor: pointer;"> 
-       關於我們
-    </a>
-</li>
+                    <li><a href="index.html#about" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">關於我們</a></li>
                     
-                    <li><button onclick="switchTab('weight-bone')" id="nav-weight-bone" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">減重與骨齡</button></li>
-                    <li><button onclick="switchTab('treatments')" id="nav-treatments" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">治療方式</button></li>
-                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">脊椎</button></li>
-                    <li><button onclick="switchTab('shoulder')" id="nav-shoulder" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">肩膀</button></li>
-                    <li><button onclick="switchTab('elbow')" id="nav-elbow" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">手肘</button></li>
-                    <li><button onclick="switchTab('hand')" id="nav-hand" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">手部</button></li>
-                    <li><button onclick="switchTab('hip')" id="nav-hip" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">髖臀</button></li>
-                    <li><button onclick="switchTab('knee')" id="nav-knee" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">膝蓋</button></li>
-                    <li><button onclick="switchTab('ankle')" id="nav-ankle" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 hover:shadow-neon transition-all">足踝</button></li>
-                    <li><button onclick="switchTab('booking')" id="nav-booking" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all ml-2 border border-pink-400/50"><i class="fa-solid fa-calendar-check mr-1"></i> 馬上預約</button></li>
+                    <li><a href="index.html#weight-loss" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-cyan-400 border-b-2 border-cyan-400 shadow-neon transition-all">減重與骨齡</a></li>
+                    
+                    <li><a href="index.html#treatments" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">治療方式</a></li>
+                    <li><a href="index.html#spine" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">脊椎</a></li>
+                    <li><a href="index.html#shoulder" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">肩膀</a></li>
+                    <li><a href="index.html#elbow" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手肘</a></li>
+                    <li><a href="index.html#hand" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手部</a></li>
+                    <li><a href="index.html#hip" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">髖臀</a></li>
+                    <li><a href="index.html#knee" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">膝蓋</a></li>
+                    <li><a href="index.html#ankle" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">足踝</a></li>
+                    <li><a href="index.html#booking" class="nav-btn px-3 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all ml-2"><i class="fa-solid fa-calendar-check mr-1"></i> 馬上預約</a></li>
                 </ul>
             </nav>
 
@@ -264,398 +151,70 @@
 
     <main class="container mx-auto px-4 py-8 flex-grow relative">
 
-        <section id="about" class="tab-content hidden" style="display:none;">
-            <div class="max-w-5xl mx-auto mb-16">
-                <div class="bg-slate-800/60 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl relative">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-2/5 relative">
-                            <div class="h-full w-full min-h-[400px] md:min-h-[500px]">
-                                <img src="https://duk.tw/UXXvK3.jpg" alt="新竹復健科推薦-林羿辰醫師" class="absolute inset-0 w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500" loading="lazy">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center relative z-10">
-                            <h2 class="text-4xl font-bold font-tech text-white mb-2">林羿辰 <span class="text-xl text-cyan-400">醫師</span></h2>
-                            <p class="text-lg text-slate-300 mb-6 border-l-4 border-cyan-500 pl-4">新竹宸新復健科診所院長 | 運動教練醫師</p>
-                            <div class="space-y-6">
-                                <div>
-                                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-graduation-cap mr-2"></i>學歷與資格</h3>
-                                    <ul class="space-y-2 text-slate-300">
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>國立台灣大學醫學系</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>雙專科醫師 (復健專科 + 骨鬆專科)</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>ACE-CPT 美國運動學會國際私人教練認證</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-briefcase mr-2"></i>經歷</h3>
-                                    <ul class="space-y-2 text-slate-300">
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>馬偕紀念醫院 主治醫師</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣復健醫學會 會員</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣增生療法醫學會 會員</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台灣大學網球校隊</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-hospital text-xl"></i></span>
-                    <h2 class="text-3xl font-bold font-tech text-white">診所資訊 <span class="text-slate-500 text-lg font-normal">Clinic Info</span></h2>
-                </div>
-
-                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6 md:p-8 mb-12 shadow-lg backdrop-blur-sm">
-                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-
-                        <div class="lg:w-5/12 flex-shrink-0">
-                            <div class="h-full w-full min-h-[300px] rounded-lg overflow-hidden border border-slate-600 shadow-md relative group">
-                                <img src="https://duk.tw/PLVLuz.png" alt="新竹市宸新復健科 - 提供X光、超音波檢查、PRP注射與體外震波治療" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                            </div>
-                        </div>
-
-                        <div class="lg:w-7/12 flex flex-col">
-
-                            <h3 class="text-3xl font-bold text-white mb-6 border-b border-slate-700 pb-4">新竹市宸新復健科</h3>
-
-                            <div class="grid md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <h4 class="text-lg font-bold text-cyan-400 mb-3 font-tech border-l-4 border-cyan-500 pl-3">診所特色項目</h4>
-                                    <ul class="space-y-2 text-slate-300 text-base">
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>醫學中心級數位X光機</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>頂規高畫質超音波檢查</li>
-                                        <li class="flex items-start"><span class="text-cyan-500 mr-2">▹</span>台大醫師團隊</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h4 class="text-lg font-bold text-cyan-400 mb-3 font-tech border-l-4 border-pink-500 pl-3">診所特色治療</h4>
-                                    <ul class="space-y-2 text-slate-300 text-base">
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>瑞士進口「聚焦式」和「擴散式」體外震波</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>瑞士專利進口高純度血小板再生治療 (PRP)</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>美國進口高能量雷射治療儀</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>羊膜注射及骨髓濃縮液 (BMAC)</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>專利韌帶肌腱玻尿酸</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>器械皮拉提斯及紅繩團體運動課程</li>
-                                        <li class="flex items-start"><span class="text-pink-500 mr-2">▹</span>兒童早療(物理+職能+語言)</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="mt-auto bg-slate-900/40 p-4 rounded-lg border border-slate-700/50">
-                                <div class="flex flex-col gap-3">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                                        <div class="flex items-start gap-3 text-slate-200 font-medium">
-                                            <i class="fa-solid fa-location-dot mt-1 text-cyan-400"></i>
-                                            <p>300新竹市東區光復路一段371號B1 (竹科附近)</p>
-                                        </div>
-                                        <a href="https://maps.app.goo.gl/dSe9zVPgnNV7m3jo9" target="_blank" class="flex-shrink-0 w-full sm:w-auto text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:shadow-neon transition-all font-medium text-sm">
-                                            <i class="fa-solid fa-map-location-dot mr-1"></i> 開啟 Google 地圖
-                                        </a>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-slate-300">
-                                        <i class="fa-solid fa-phone text-cyan-400"></i>
-                                        <p class="font-tech tracking-wide text-lg">(03) 564-7999</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-      
-        <section id="booking" class="tab-content hidden fade-in">
-            <div class="flex items-center gap-3 mb-8 justify-center">
-                <span class="bg-pink-500/20 text-pink-400 p-3 rounded-lg border border-pink-500/30"><i class="fa-solid fa-calendar-check text-xl"></i></span>
-                <h2 class="text-3xl font-bold font-tech text-white">馬上預約 <span class="text-slate-500 text-lg font-normal">Book Now</span></h2>
-            </div>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center hover:border-green-500/50 transition-all group">
-                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20">
-                        <i class="fa-brands fa-android text-3xl text-green-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Android 下載</h3>
-                    <p class="text-slate-400 text-sm mb-4">安卓手機用戶請點此</p>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=http://bit.ly/2Q8FdeK" alt="Android QR Code" class="w-40 h-40 mx-auto mb-4 rounded-lg bg-white p-2">
-                    <a href="http://bit.ly/2Q8FdeK" target="_blank" class="inline-block px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg transition-colors text-sm">點擊下載 App</a>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-all group">
-                    <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20">
-                        <i class="fa-brands fa-apple text-3xl text-blue-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">iOS 下載</h3>
-                    <p class="text-slate-400 text-sm mb-4">iPhone 用戶請點此</p>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://apple.co/2vZfRsH" alt="iOS QR Code" class="w-40 h-40 mx-auto mb-4 rounded-lg bg-white p-2">
-                    <a href="https://apple.co/2vZfRsH" target="_blank" class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors text-sm">點擊下載 App</a>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center hover:border-green-400/50 transition-all group">
-                    <div class="w-16 h-16 bg-green-400/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-400/20">
-                        <i class="fa-brands fa-line text-3xl text-green-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Line 預約</h3>
-                    <p class="text-slate-400 text-sm mb-4">加入官方 Line 好友</p>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lin.ee/FHj3mIs" alt="Line QR Code" class="w-40 h-40 mx-auto mb-4 rounded-lg bg-white p-2">
-                    <a href="https://lin.ee/FHj3mIs" target="_blank" class="inline-block px-4 py-2 bg-green-500 hover:bg-green-400 text-white rounded-lg transition-colors text-sm">加入好友預約</a>
-                </div>
-            </div>
-        </section>
-
-      
-<section id="detail-bone-age" class="pt-28 pb-12 px-4 min-h-screen relative z-10">
-    
-    <div class="container mx-auto max-w-5xl"> <a href="index.html#weight-loss" class="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors mb-6 no-underline font-medium text-lg">
-            <i class="fa-solid fa-arrow-left"></i> 返回減重與骨齡列表
-        </a>
-
-        <div class="bg-slate-800/90 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-6 md:p-8">
-            
-            <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                <div class="hidden md:block bg-white p-1 rounded-lg shrink-0">
-                    <img class="qr-code-img w-20 h-20" src="images/qr-code.png" onerror="this.style.display='none'" alt="QR Code">
-                </div>
-                <div>
-                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">兒童骨齡評估</h1>
-                    <p class="text-cyan-400 font-medium">掌握黃金生長發育期</p>
-                </div>
-            </div>
-
-            <div class="text-slate-300 leading-relaxed text-lg mb-8 border-b border-slate-700 pb-6">
-                <p class="mb-4">不需要預約、掛號或等待 ⏰ 一秒鐘手掌 🖐️ 低輻射劑量拍攝，安全又快速 👍</p>
-                <p class="mb-4">AI預測 🤖 未來身高，經由骨齡及父母身高，精準預測未來身高!</p>
-                <p>破百名兒童已經參與，並高度好評肯定 💯，你還等什麼?</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
-                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-700">
-                    <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-star text-yellow-500"></i> 我們的特色
-                    </h4>
-                    <ul class="space-y-3 text-slate-300 list-disc list-inside">
-                        <li>門診時間來馬上照不用候診掛號</li>
-                        <li>使用TW3法判讀及二代AI輔助更精準</li>
-                        <li>依照需求階段性選擇付費</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-700">
-                    <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-check-circle text-green-500"></i> TW3法的優點
-                    </h4>
-                    <ul class="space-y-3 text-slate-300 list-disc list-inside">
-                        <li>準確度高</li>
-                        <li>更能反映真實的身高潛力</li>
-                        <li>模板更符合亞洲人</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="mb-8 text-center bg-black/20 p-4 rounded-xl">
-                    <h5 class="text-slate-400 mb-2 text-sm">骨齡判讀示意圖</h5>
-                    <img src="https://duk.tw/6nDOQW.jpg" alt="骨齡報告範例" class="max-w-full h-auto rounded-lg shadow-lg mx-auto">
-                </div>
-                <div class="mb-8 text-center bg-black/20 p-4 rounded-xl">
-                    <h5 class="text-slate-400 mb-2 text-sm">生長曲線預測</h5>
-                    <img src="https://duk.tw/GKDDBX.jpg" alt="生長曲線範例" class="max-w-full h-auto rounded-lg shadow-lg mx-auto">
-                </div>
-            </div>
-
-            <div class="mt-8 text-center border-t border-slate-700 pt-8">
-                <a href="index.html#contact" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg no-underline">
-                    立即預約諮詢
+        <section id="detail-bone-age" class="pt-28 pb-12 px-4 min-h-screen relative z-10">
+            <div class="container mx-auto max-w-5xl"> 
+                <a href="index.html#weight-loss" class="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors mb-6 no-underline font-medium text-lg">
+                    <i class="fa-solid fa-arrow-left"></i> 返回減重與骨齡列表
                 </a>
-            </div>
 
-        </div>
-    </div>
-</section>
+                <div class="bg-slate-800/90 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-6 md:p-8">
+                    
+                    <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
+                        <div class="hidden md:block bg-white p-1 rounded-lg shrink-0">
+                            <img class="qr-code-img w-20 h-20" src="images/qr-code.png" onerror="this.style.display='none'" alt="QR Code">
+                        </div>
+                        <div>
+                            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">兒童骨齡評估</h1>
+                            <p class="text-cyan-400 font-medium">掌握黃金生長發育期</p>
+                        </div>
+                    </div>
 
-        <section id="detail-knee-oa" class="tab-content hidden fade-in">
-            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">退化性膝關節炎</h1>
+                    <div class="text-slate-300 leading-relaxed text-lg mb-8 border-b border-slate-700 pb-6">
+                        <p class="mb-4">不需要預約、掛號或等待 ⏰ 一秒鐘手掌 🖐️ 低輻射劑量拍攝，安全又快速 👍</p>
+                        <p class="mb-4">AI預測 🤖 未來身高，經由骨齡及父母身高，精準預測未來身高!</p>
+                        <p>破百名兒童已經參與，並高度好評肯定 💯，你還等什麼?</p>
                     </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">關節軟骨磨損，導致上下樓梯無力、蹲下站不起來，嚴重時會O型腿變形。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>上下樓梯無力疼痛。</li>
-                            <li>膝蓋僵硬、活動有喀喀聲。</li>
-                            <li>嚴重時關節積水腫脹。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>減重是首要任務。</li>
-                            <li>股四頭肌肌力訓練。</li>
-                            <li>玻尿酸或PRP注射。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
 
-        <section id="detail-meniscus" class="tab-content hidden fade-in">
-            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">半月板破裂</h1>
+                    <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
+                        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-700">
+                            <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-star text-yellow-500"></i> 我們的特色
+                            </h4>
+                            <ul class="space-y-3 text-slate-300 list-disc list-inside">
+                                <li>門診時間來馬上照不用候診掛號</li>
+                                <li>使用TW3法判讀及二代AI輔助更精準</li>
+                                <li>依照需求階段性選擇付費</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-700">
+                            <h4 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle text-green-500"></i> TW3法的優點
+                            </h4>
+                            <ul class="space-y-3 text-slate-300 list-disc list-inside">
+                                <li>準確度高</li>
+                                <li>更能反映真實的身高潛力</li>
+                                <li>模板更符合亞洲人</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">膝蓋內的緩衝墊破裂，導致膝蓋腫脹、疼痛，甚至會有「卡住」(Locking) 無法伸直的現象。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>膝蓋關節縫隙壓痛。</li>
-                            <li>會有「卡住」(Locking) 無法伸直的現象。</li>
-                            <li>活動時有彈響聲。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>年輕人優先修補手術。</li>
-                            <li>老年退化性可保守治療。</li>
-                            <li>嚴重卡住需關節鏡部分切除。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
 
-        <section id="detail-acl" class="tab-content hidden fade-in">
-            <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">前十字韌帶斷裂</h1>
+                    <div class="space-y-6">
+                        <div class="mb-8 text-center bg-black/20 p-4 rounded-xl">
+                            <h5 class="text-slate-400 mb-2 text-sm">骨齡判讀示意圖</h5>
+                            <img src="https://duk.tw/6nDOQW.jpg" alt="骨齡報告範例" class="max-w-full h-auto rounded-lg shadow-lg mx-auto">
+                        </div>
+                        <div class="mb-8 text-center bg-black/20 p-4 rounded-xl">
+                            <h5 class="text-slate-400 mb-2 text-sm">生長曲線預測</h5>
+                            <img src="https://duk.tw/GKDDBX.jpg" alt="生長曲線範例" class="max-w-full h-auto rounded-lg shadow-lg mx-auto">
+                        </div>
                     </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">常見於急停轉身的運動傷害，受傷當下常聽到「啪」一聲，之後膝蓋會反覆腫脹且感到鬆動不穩。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>受傷時聽到斷裂聲。</li>
-                            <li>膝蓋迅速腫脹積血。</li>
-                            <li>走路感到膝蓋鬆動不穩 (Giving way)。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>消腫止痛。</li>
-                            <li>肌力訓練（不手術者）。</li>
-                            <li>若要重回高強度運動，需進行韌帶重建手術。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
 
-        <section id="detail-plantar" class="tab-content hidden fade-in">
-            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">足底筋膜炎</h1>
+                    <div class="mt-8 text-center border-t border-slate-700 pt-8">
+                        <a href="index.html#contact" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg no-underline">
+                            立即預約諮詢
+                        </a>
                     </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">典型症狀是「早上起床踩地第一步最痛」，行走一段時間後緩解，但久站久走後疼痛又加劇。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>早上下床第一步腳跟劇痛。</li>
-                            <li>行走一段時間後疼痛緩解。</li>
-                            <li>久站久走後疼痛又加劇。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>足底筋膜伸展。</li>
-                            <li>小腿拉筋。</li>
-                            <li>穿著足弓支撐鞋墊。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
 
-        <section id="detail-sprain" class="tab-content hidden fade-in">
-            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">踝關節扭傷</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">最常見的運動傷害（翻船），通常是腳踝向內翻轉導致外側韌帶拉傷或斷裂，造成外踝腫脹瘀血。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>外側腳踝腫脹瘀血。</li>
-                            <li>觸摸外側韌帶處有壓痛。</li>
-                            <li>行走疼痛困難。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>急性期：RICE原則（休息、冰敷、壓迫、抬高）。</li>
-                            <li>護踝保護。</li>
-                            <li>慢性期：本體感覺訓練防復發。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
-
-        <section id="detail-achilles" class="tab-content hidden fade-in">
-            <button onclick="switchTab('ankle')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回足踝列表</button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">阿基里斯腱發炎</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">連接小腿肌肉與腳跟的粗大肌腱發炎。症狀為腳跟上方腫脹、按壓痛，墊腳尖時疼痛加劇。</div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
                 </div>
             </div>
         </section>
@@ -665,74 +224,15 @@
                 <span class="text-cyan-400">快速</span>導覽
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
-                <div onclick="switchTab('treatments')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                <a href="index.html#treatments" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
                     <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800" alt="治療方式" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">治療方式</span></div>
-                </div>
-                <div onclick="switchTab('spine')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                </a>
+                <a href="index.html#spine" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
                     <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800" alt="脊椎" class="absolute inset-0 w-full h-full object-cover object-top">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">脊椎問題</span></div>
+                </a>
                 </div>
-                <div onclick="switchTab('shoulder')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1593786481097-cf281dd12e9e?q=80&w=800" alt="肩膀" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">肩膀問題</span></div>
-                </div>
-                <div onclick="switchTab('elbow')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=800" alt="手肘" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">手肘問題</span></div>
-                </div>
-                <div onclick="switchTab('hand')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://duk.tw/06WShM.webp" alt="手部" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">手部問題</span></div>
-                </div>
-                <div onclick="switchTab('hip')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?q=80&w=800" alt="髖臀" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">髖臀問題</span></div>
-                </div>
-                <div onclick="switchTab('knee')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?q=80&w=800" alt="膝蓋" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">膝蓋關節</span></div>
-                </div>
-                <div onclick="switchTab('ankle')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800" alt="足踝" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">足踝問題</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="more-info" class="max-w-5xl mx-auto mt-16 mb-8">
-            <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-8 shadow-2xl">
-                <div class="mb-10">
-                    <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-magnifying-glass text-cyan-400 mr-2"></i> 站內搜尋</h3>
-                    <div class="relative">
-                        <input type="text" id="search-input" placeholder="輸入關鍵字搜尋疾病或治療方式 (例如: 膝蓋, 震波)" class="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-3 pl-12 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
-                        <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"></i>
-                    </div>
-                    <div id="search-results" class="mt-4 space-y-2"></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 border-t border-slate-700 pt-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-6">追蹤我們</h3>
-                        <div class="flex gap-4 items-center flex-wrap">
-                            <a href="https://www.facebook.com/DrYiChen" target="_blank" class="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-blue-500/30"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/dryichen/" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-pink-500/30"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-white/30"><i class="fa-brands fa-threads"></i></a>
-                            <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" class="w-12 h-12 rounded-full bg-[#FF0000] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-red-500/30"><i class="fa-brands fa-youtube"></i></a>
-
-                            <button onclick="switchTab('booking')" class="px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all border border-pink-400/50 flex items-center gap-2">
-                                <i class="fa-solid fa-calendar-check"></i> 馬上預約
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="text-right md:text-right text-left flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">宸新復健科診所</h3>
-                        <p class="text-slate-300 mb-2"><i class="fa-solid fa-phone text-cyan-400 mr-2"></i> (03) 564-7999</p>
-                        <p class="text-slate-300"><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> 300新竹市東區光復路一段371號B1</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
     </main>
@@ -746,109 +246,5 @@
         </div>
     </footer>
 
- <!-- Tab Switching Logic -->
-    <script>
-        // 1. 核心導航邏輯：監聽網址 Hash 變動
-        function handleHashChange() {
-            const hash = window.location.hash.substring(1) || 'about';
-            document.querySelectorAll('.tab-content').forEach(section => {
-                section.classList.add('hidden');
-                section.classList.remove('fade-in'); 
-            });
-
-            const targetSection = document.getElementById(hash);
-            if (targetSection) {
-                targetSection.classList.remove('hidden');
-                void targetSection.offsetWidth; 
-                targetSection.classList.add('fade-in');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                
-                // Update QR Code if a QR code image exists in this section
-                updateQRCode(hash);
-                
-                updateNavState(hash);
-            } else {
-                if (hash !== '' && hash !== 'about') window.location.hash = 'about';
-            }
-        }
-
-        // 2. 更新導覽列按鈕外觀
-        function updateNavState(currentHash) {
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('active', 'text-cyan-400', 'border-b-2', 'border-cyan-400', 'shadow-neon');
-                btn.classList.add('text-slate-300');
-            });
-            const activeBtn = document.getElementById('nav-' + currentHash);
-            if (activeBtn) {
-                activeBtn.classList.add('active', 'text-cyan-400', 'border-b-2', 'border-cyan-400');
-                activeBtn.classList.remove('text-slate-300');
-            }
-        }
-        
-        // 3. Update QR Code for Detail Section
-        function updateQRCode(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (!section) return;
-
-            const img = section.querySelector('.qr-code-img');
-            if (img) {
-                // Construct full URL including hash
-                const fullUrl = window.location.origin + window.location.pathname + window.location.search + '#' + sectionId;
-                const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(fullUrl)}`;
-                img.src = apiUrl;
-            }
-        }
-
-        function openDetail(detailId) {
-            window.location.hash = 'detail-' + detailId;
-        }
-
-        function switchTab(tabId) {
-            window.location.hash = tabId;
-        }
-
-        // Search Logic
-        document.getElementById('search-input').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
-            const resultsContainer = document.getElementById('search-results');
-            resultsContainer.innerHTML = '';
-
-            if (query.length < 1) return;
-
-            const articles = document.querySelectorAll('article');
-            let found = false;
-
-            articles.forEach(article => {
-                const title = article.querySelector('h3')?.innerText || '';
-                const text = article.innerText;
-                
-                if (text.toLowerCase().includes(query)) {
-                    const onclickVal = article.getAttribute('onclick');
-                    if (onclickVal) {
-                        const idMatch = onclickVal.match(/'([^']+)'/);
-                        if (idMatch) {
-                            const id = idMatch[1];
-                            const div = document.createElement('div');
-                            div.className = "bg-slate-700/50 p-3 rounded cursor-pointer hover:bg-slate-600 transition-colors border border-slate-600 flex justify-between items-center";
-                            div.innerHTML = `<span class="font-bold text-cyan-400">${title}</span><span class="text-xs text-slate-400"><i class="fa-solid fa-arrow-right"></i> 查看</span>`;
-                            div.onclick = () => openDetail(id);
-                            resultsContainer.appendChild(div);
-                            found = true;
-                        }
-                    }
-                }
-            });
-            
-            if (!found) {
-                resultsContainer.innerHTML = '<div class="text-slate-500 text-sm p-2">查無相關結果，請嘗試其他關鍵字。</div>';
-            }
-        });
-
-        window.addEventListener('DOMContentLoaded', handleHashChange);
-        window.addEventListener('hashchange', handleHashChange);
-    </script>
-</body>
+    </body>
 </html>
-
-
-   
