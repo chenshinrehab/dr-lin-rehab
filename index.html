@@ -1857,6 +1857,20 @@
         window.addEventListener('DOMContentLoaded', handleHashChange);
         window.addEventListener('hashchange', handleHashChange);
     </script>
+<script>
+    // 當頁面載入時，檢查網址有沒有帶 #about
+    window.onload = function() {
+        var hash = window.location.hash; // 取得 # 後面的字
+        if (hash === '#about') {
+            switchTab('about'); // 如果網址有 #about，就自動執行切換功能
+        }
+        // 如果有其他分頁，也可以依此類推
+        else if (hash === '#weight-loss') {
+            switchTab('weight-loss');
+        }
+    };
+</script>
+    
 </body>
 </html>
 
