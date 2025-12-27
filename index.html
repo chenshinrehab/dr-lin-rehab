@@ -229,10 +229,11 @@
                     <li><button onclick="switchTab('weight-bone')" id="nav-weight-bone" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">減重與骨齡</button></li>
                     
                     <li><button onclick="switchTab('treatments')" id="nav-treatments" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">治療方式</button></li>
-                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">脊椎髖臀</button></li>
+                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">脊椎</button></li>
                     <li><button onclick="switchTab('shoulder')" id="nav-shoulder" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">肩膀</button></li>
                     <li><button onclick="switchTab('elbow')" id="nav-elbow" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手肘</button></li>
                     <li><button onclick="switchTab('hand')" id="nav-hand" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手部</button></li>
+                    <li><button onclick="switchTab('hip')" id="nav-hip" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">髖臀</button></li>
                     <li><button onclick="switchTab('knee')" id="nav-knee" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">膝蓋</button></li>
                     <li><button onclick="switchTab('ankle')" id="nav-ankle" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">足踝</button></li>
                     <li><button onclick="switchTab('booking')" id="nav-booking" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all ml-1"><i class="fa-solid fa-calendar-check mr-1"></i> 預約</button></li>
@@ -427,7 +428,7 @@
         <section id="spine" class="tab-content hidden">
             <div class="flex items-center gap-3 mb-6">
                 <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-server text-xl"></i></span>
-                <h2 class="text-3xl font-bold font-tech text-white">脊椎髖臀 <span class="text-slate-500 text-lg font-normal">Spine Problems</span></h2>
+                <h2 class="text-3xl font-bold font-tech text-white">脊椎問題 <span class="text-slate-500 text-lg font-normal">Spine Problems</span></h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <article onclick="openDetail('herniation')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
@@ -464,32 +465,6 @@
                         <p class="text-slate-400 text-sm">走不遠就需要坐下休息，好發於長輩。</p>
                     </div>
                 </article>
-
-                <article onclick="openDetail('hip-oa')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-3">退化性髖關節炎</h3>
-                    <p class="text-slate-400 text-sm mb-4">軟骨磨損導致鼠蹊部疼痛，影響行走與穿襪等日常動作。</p>
-                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
-                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
-                        <p class="text-slate-400 text-sm">減重、肌力訓練、人工關節置換。</p>
-                    </div>
-                </article>
-                <article onclick="openDetail('piriformis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-3">梨狀肌症候群</h3>
-                    <p class="text-slate-400 text-sm mb-4">梨狀肌緊繃壓迫坐骨神經，造成深層臀部疼痛。</p>
-                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
-                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
-                        <p class="text-slate-400 text-sm">臀部伸展、震波放鬆深層肌肉。</p>
-                    </div>
-                </article>
-                <article onclick="openDetail('bursitis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-3">大轉子滑囊炎</h3>
-                    <p class="text-slate-400 text-sm mb-4">髖關節外側疼痛，側睡壓到會痛醒，常因髂脛束過緊摩擦滑囊引起。</p>
-                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
-                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
-                        <p class="text-slate-400 text-sm">局部注射、滾筒放鬆大腿外側。</p>
-                    </div>
-                </article>
-                
             </div>
         </section>
 
@@ -587,6 +562,39 @@
                     <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
                         <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
                         <p class="text-slate-400 text-sm">夜間副木固定、神經解離手術。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="hip" class="tab-content hidden">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-cyan-500/20 text-cyan-400 p-3 rounded-lg border border-cyan-500/30"><i class="fa-solid fa-bone text-xl"></i></span>
+                <h2 class="text-3xl font-bold font-tech text-white">髖臀問題 <span class="text-slate-500 text-lg font-normal">Hip Problems</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article onclick="openDetail('hip-oa')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">退化性髖關節炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">軟骨磨損導致鼠蹊部疼痛，影響行走與穿襪等日常動作。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
+                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
+                        <p class="text-slate-400 text-sm">減重、肌力訓練、人工關節置換。</p>
+                    </div>
+                </article>
+                <article onclick="openDetail('piriformis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">梨狀肌症候群</h3>
+                    <p class="text-slate-400 text-sm mb-4">梨狀肌緊繃壓迫坐骨神經，造成深層臀部疼痛。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
+                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
+                        <p class="text-slate-400 text-sm">臀部伸展、震波放鬆深層肌肉。</p>
+                    </div>
+                </article>
+                <article onclick="openDetail('bursitis')" class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-xl hover:border-cyan-500/50 transition-all hover:shadow-neon group hover:-translate-y-1 cursor-pointer">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">大轉子滑囊炎</h3>
+                    <p class="text-slate-400 text-sm mb-4">髖關節外側疼痛，側睡壓到會痛醒，常因髂脛束過緊摩擦滑囊引起。</p>
+                    <div class="bg-slate-900/50 p-3 rounded border-l-2 border-green-500">
+                        <h4 class="font-semibold text-slate-200 mb-1 text-sm">重點</h4>
+                        <p class="text-slate-400 text-sm">局部注射、滾筒放鬆大腿外側。</p>
                     </div>
                 </article>
             </div>
@@ -1059,110 +1067,6 @@
             </div>
         </section>
 
-        
-   <section id="detail-hip-oa" class="tab-content hidden fade-in">
-                <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"> <i class="fa-solid fa-arrow-left"></i> 返回列表 </button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">退化性髖關節炎</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">軟骨磨損與缺血性壞死導致，常發生在老年人或長期使用類固醇者。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>鼠蹊部深處疼痛。</li>
-                            <li>走路跛行。</li>
-                            <li>盤腿或穿襪子動作困難。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>減重減輕負擔。</li>
-                            <li>肌力訓練。</li>
-                            <li>嚴重者需人工關節置換。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
-
-        <section id="detail-piriformis" class="tab-content hidden fade-in">
-               <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"> <i class="fa-solid fa-arrow-left"></i> 返回列表 </button>
-            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">梨狀肌症候群</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">深層臀部疼痛，因梨狀肌緊繃壓迫到下方的坐骨神經，常被誤認為椎間盤突出。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>臀部深處酸痛。</li>
-                            <li>久坐後疼痛加劇。</li>
-                            <li>可能放射至大腿後側。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>臀部伸展運動。</li>
-                            <li>震波治療放鬆深層肌肉。</li>
-                            <li>姿勢調整避免久坐。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
-
-        <section id="detail-bursitis" class="tab-content hidden fade-in">
-                <button onclick="switchTab('spine')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"> <i class="fa-solid fa-arrow-left"></i> 返回列表 </button>
-                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
-                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">大轉子滑囊炎</h1>
-                    </div>
-                </div>
-                <div class="text-slate-300 leading-relaxed text-lg mb-8">髖關節外側疼痛，特別是側睡壓到患側時會痛醒，常因髂脛束過緊摩擦滑囊引起。</div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>髖部外側壓痛。</li>
-                            <li>側睡壓到患側時會痛醒。</li>
-                            <li>走路或上下樓梯時疼痛。</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
-                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
-                            <li>局部注射消炎。</li>
-                            <li>滾筒放鬆大腿外側。</li>
-                            <li>物理治療。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
-                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
-                </div>
-            </div>
-        </section>
-
-
-        
         <section id="detail-frozen-shoulder" class="tab-content hidden fade-in">
             <button onclick="switchTab('shoulder')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回肩膀列表</button>
             <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
@@ -1472,7 +1376,108 @@
             </div>
         </section>
 
-     
+        <section id="detail-hip-oa" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
+                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">退化性髖關節炎</h1>
+                    </div>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">軟骨磨損與缺血性壞死導致，常發生在老年人或長期使用類固醇者。</div>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>鼠蹊部深處疼痛。</li>
+                            <li>走路跛行。</li>
+                            <li>盤腿或穿襪子動作困難。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>減重減輕負擔。</li>
+                            <li>肌力訓練。</li>
+                            <li>嚴重者需人工關節置換。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
+                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="detail-piriformis" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
+                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">梨狀肌症候群</h1>
+                    </div>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">深層臀部疼痛，因梨狀肌緊繃壓迫到下方的坐骨神經，常被誤認為椎間盤突出。</div>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>臀部深處酸痛。</li>
+                            <li>久坐後疼痛加劇。</li>
+                            <li>可能放射至大腿後側。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>臀部伸展運動。</li>
+                            <li>震波治療放鬆深層肌肉。</li>
+                            <li>姿勢調整避免久坐。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
+                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="detail-bursitis" class="tab-content hidden fade-in">
+            <button onclick="switchTab('hip')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回髖臀列表</button>
+            <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
+                <div class="mb-8 border-l-4 border-cyan-500 pl-4 bg-gradient-to-r from-slate-900/50 to-transparent py-4 rounded-r-xl flex items-center gap-6">
+                    <div class="hidden md:block bg-white p-1 rounded-lg shrink-0"><img class="qr-code-img w-20 h-20" src="" alt="本頁QR Code"></div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold font-tech text-white mb-2">大轉子滑囊炎</h1>
+                    </div>
+                </div>
+                <div class="text-slate-300 leading-relaxed text-lg mb-8">髖關節外側疼痛，特別是側睡壓到患側時會痛醒，常因髂脛束過緊摩擦滑囊引起。</div>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">常見症狀</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>髖部外側壓痛。</li>
+                            <li>側睡壓到患側時會痛醒。</li>
+                            <li>走路或上下樓梯時疼痛。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-4">治療建議</h4>
+                        <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                            <li>局部注射消炎。</li>
+                            <li>滾筒放鬆大腿外側。</li>
+                            <li>物理治療。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-8 text-center border-2 border-dashed border-slate-700"><i class="fa-regular fa-image text-5xl text-slate-600 mb-3"></i>
+                    <h4 class="text-lg font-bold text-slate-400">示意圖/影片</h4>
+                </div>
+            </div>
+        </section>
+
         <section id="detail-knee-oa" class="tab-content hidden fade-in">
             <button onclick="switchTab('knee')" class="mb-6 flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-arrow-left"></i> 返回膝蓋列表</button>
             <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-8">
@@ -1698,10 +1703,18 @@
                 </div>
             </div>
         </section>
-            <section id="more-info" class="max-w-5xl mx-auto mt-16 mb-8 px-4">
+
+        <section id="more-info" class="max-w-5xl mx-auto mt-16 mb-8">
             <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-8 shadow-2xl">
-                
-                <div class="grid md:grid-cols-2 gap-8 pt-4"> 
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-magnifying-glass text-cyan-400 mr-2"></i> 站內搜尋</h3>
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="輸入關鍵字搜尋疾病或治療方式 (例如: 膝蓋, 震波)" class="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-3 pl-12 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
+                        <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"></i>
+                    </div>
+                    <div id="search-results" class="mt-4 space-y-2"></div>
+                </div>
+                    <div class="grid md:grid-cols-2 gap-8 pt-4"> 
                     
                     <div class="flex flex-col justify-center">
                         
@@ -1738,17 +1751,6 @@
                                 <i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> 300新竹市東區光復路一段371號B1
                             </a>
                         </p>
-                    </div>
-
-                </div>
-            </div>
-      </section>
-
-                    
-                    <div class="text-right md:text-right text-left flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">宸新復健科診所</h3>
-                        <p class="text-slate-300 mb-2"><i class="fa-solid fa-phone text-cyan-400 mr-2"></i> (03) 564-7999</p>
-                        <p class="text-slate-300"><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> 300新竹市東區光復路一段371號B1</p>
                     </div>
                 </div>
             </div>
@@ -1866,7 +1868,6 @@
         window.addEventListener('DOMContentLoaded', handleHashChange);
         window.addEventListener('hashchange', handleHashChange);
     </script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
 
