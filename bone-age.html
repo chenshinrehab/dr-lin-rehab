@@ -200,70 +200,85 @@
             </div>
         </section>
 
+
         <section id="visual-nav" class="mt-16 pt-12 border-t border-slate-800">
             <h2 class="text-2xl font-bold font-tech text-white text-center mb-8 tracking-wide">
                 <span class="text-cyan-400">快速</span>導覽
             </h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 max-w-6xl mx-auto">
-                
-                <a href="index.html#treatments" title="復健治療方式" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800" alt="新竹復健治療推薦" class="absolute inset-0 w-full h-full object-cover">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+                <div onclick="switchTab('treatments')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800" alt="治療方式" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">治療方式</span></div>
-                </a>
-
-                <a href="index.html#spine" title="脊椎復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800" alt="脊椎疼痛治療" class="absolute inset-0 w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">脊椎問題</span></div>
-                </a>
-
-                <a href="index.html#shoulder" title="肩膀復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1593786481097-cf281dd12e9e?q=80&w=800" alt="五十肩治療" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div onclick="switchTab('weight-bone')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://duk.tw/R97hvw.jpg" alt="減重與骨齡" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">減重與骨齡</span></div>
+                </div>
+                <div onclick="switchTab('spine')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800" alt="脊椎髖臀" class="absolute inset-0 w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">脊椎髖臀</span></div>
+                </div>
+                <div onclick="switchTab('shoulder')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1593786481097-cf281dd12e9e?q=80&w=800" alt="肩膀" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">肩膀問題</span></div>
-                </a>
-
-                <a href="index.html#elbow" title="手肘復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=800" alt="網球肘治療" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div onclick="switchTab('elbow')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=800" alt="手肘" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">手肘問題</span></div>
-                </a>
-
-                <a href="index.html#hand" title="手部復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://duk.tw/06WShM.webp" alt="媽媽手板機指治療" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div onclick="switchTab('hand')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://duk.tw/06WShM.webp" alt="手部" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">手部問題</span></div>
-                </a>
-
-                <a href="index.html#hip" title="髖臀復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?q=80&w=800" alt="坐骨神經痛治療" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">髖臀問題</span></div>
-                </a>
-
-                <a href="index.html#knee" title="膝蓋復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?q=80&w=800" alt="退化性關節炎治療" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div onclick="switchTab('knee')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?q=80&w=800" alt="膝蓋" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">膝蓋關節</span></div>
-                </a>
-
-                <a href="index.html#ankle" title="足踝復健" class="block cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800" alt="足底筋膜炎治療" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div onclick="switchTab('ankle')" class="cursor-pointer group img-zoom-container rounded-xl relative h-40 overflow-hidden shadow-lg border border-slate-700 hover:border-cyan-500 hover:shadow-neon transition-all">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800" alt="足踝" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end p-4"><span class="text-white font-bold group-hover:text-cyan-400 transition-colors">足踝問題</span></div>
-                </a>
-
+                </div>
             </div>
         </section>
 
-        <section id="more-info" class="max-w-5xl mx-auto mt-16 mb-8 px-4">
+        <section id="more-info" class="max-w-5xl mx-auto mt-16 mb-8">
             <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-8 shadow-2xl">
-                
-                <div class="grid md:grid-cols-2 gap-8 pt-4"> <div>
-                        <h3 class="text-2xl font-bold text-white mb-6">追蹤我們</h3>
-                        <div class="flex gap-4 items-center flex-wrap">
-                            <a href="https://www.facebook.com/DrYiChen" target="_blank" title="林羿辰醫師 Facebook" class="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-blue-500/30"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/dryichen/" target="_blank" title="林羿辰醫師 Instagram" class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-pink-500/30"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" title="林羿辰醫師 Threads" class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-white/30"><i class="fa-brands fa-threads"></i></a>
-                            <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" title="林羿辰醫師 YouTube" class="w-12 h-12 rounded-full bg-[#FF0000] text-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg shadow-red-500/30"><i class="fa-brands fa-youtube"></i></a>
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-magnifying-glass text-cyan-400 mr-2"></i> 站內搜尋</h3>
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="輸入關鍵字搜尋疾病或治療方式 (例如: 膝蓋, 震波)" class="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-3 pl-12 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
+                        <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"></i>
+                    </div>
+                    <div id="search-results" class="mt-4 space-y-2"></div>
+                </div>
 
-                            <a href="index.html#booking" title="線上預約" class="px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all border border-pink-400/50 flex items-center gap-2 no-underline cursor-pointer">
+                    <div class="grid md:grid-cols-2 gap-8 pt-4"> 
+                    
+                    <div class="flex flex-col justify-center">
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3">追蹤我們</h3>
+                        
+                        <div class="flex gap-3 items-center flex-wrap">
+                            <a href="https://www.facebook.com/DrYiChen" target="_blank" title="林羿辰醫師 Facebook" class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform shadow-lg shadow-blue-500/30"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/dryichen/" target="_blank" title="林羿辰醫師 Instagram" class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform shadow-lg shadow-pink-500/30"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" title="林羿辰醫師 Threads" class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center text-lg hover:scale-110 transition-transform shadow-lg shadow-white/30"><i class="fa-brands fa-threads"></i></a>
+                            <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" title="林羿辰醫師 YouTube" class="w-10 h-10 rounded-full bg-[#FF0000] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform shadow-lg shadow-red-500/30"><i class="fa-brands fa-youtube"></i></a>
+
+                            <a href="index.html#booking" class="px-3 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all border border-pink-400/50 flex items-center gap-1.5 no-underline cursor-pointer">
                                 <i class="fa-solid fa-calendar-check"></i> 馬上預約
                             </a>
+
+                            <div class="flex items-center gap-2 ml-2">
+                                <i class="fa-solid fa-eye text-cyan-400 text-xl"></i>
+                                
+                                <span class="text-xl font-bold text-white">累計瀏覽:</span>
+                                
+                                <span id="busuanzi_container_site_pv" style="display:inline">
+                                    <span id="busuanzi_value_site_pv" class="text-xl font-bold font-tech text-white">--</span>
+                                </span>
+                            </div>
                         </div>
+
                     </div>
 
                     <div class="text-left md:text-right flex flex-col justify-center">
@@ -275,6 +290,8 @@
                             </a>
                         </p>
                     </div>
+
+                
                 </div>
             </div>
         </section>
@@ -289,6 +306,5 @@
             </p>
         </div>
     </footer>
-
 </body>
 </html>
