@@ -197,48 +197,47 @@
 </head>
 
 <body class="antialiased min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg shadow-cyan-900/20">
+        <div class="container mx-auto px-3"> <div class="relative flex items-center justify-between py-2 md:py-3 border-b border-slate-800/50 min-h-[52px] md:min-h-[60px]">
 
-  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg shadow-cyan-900/20">
-        <div class="container mx-auto px-2"> <div class="relative flex items-center justify-between py-1 md:py-3 border-b border-slate-800/50 min-h-[45px] md:min-h-[60px]">
-
-                <div class="flex items-center gap-2 group cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2 z-10" onclick="switchTab('about')">
-                    <img src="https://duk.tw/iHBaCj.png" alt="新竹宸新復健科診所 Logo" class="w-9 h-9 md:w-14 md:h-14 rounded-full object-cover border-2 border-cyan-400 shadow-neon group-hover:shadow-neon-hover transition-all duration-300">
+                <div class="flex items-center gap-2.5 group cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2 z-10" onclick="switchTab('about')">
+                    <img src="https://duk.tw/iHBaCj.png" alt="新竹宸新復健科診所 Logo" class="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-cyan-400 shadow-neon group-hover:shadow-neon-hover transition-all duration-300">
                     <div class="text-left">
-                        <h1 class="text-sm md:text-2xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 leading-tight">
+                        <h1 class="text-base md:text-2xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 leading-tight">
                             運動教練醫師-林羿辰
                         </h1>
-                        <p class="text-[9px] md:text-xs text-slate-400 tracking-wider leading-none mt-0.5">宸新復健科診所院長</p>
+                        <p class="text-[10px] md:text-xs text-slate-400 tracking-wider leading-none mt-0.5">宸新復健科診所院長</p>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-2 ml-auto z-20">
                     <div class="hidden sm:flex items-center gap-2">
-                        <button onclick="switchTab('about')" title="回到首頁" class="w-7 h-7 rounded-full bg-slate-800 text-cyan-400 border border-cyan-400 flex items-center justify-center text-[10px]">
+                        <button onclick="switchTab('about')" title="回到首頁" class="w-8 h-8 rounded-full bg-slate-800 text-cyan-400 border border-cyan-400 flex items-center justify-center text-xs">
                             <i class="fa-solid fa-house"></i>
                         </button>
-                        <a href="https://www.facebook.com/DrYiChen" target="_blank" class="w-7 h-7 rounded-full bg-[#1877F2] border border-[#1877F2] text-white flex items-center justify-center text-[10px]"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/dryichen/" target="_blank" class="w-7 h-7 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center text-[10px] border-none"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" class="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-[10px] border-none"><i class="fa-brands fa-threads"></i></a>
-                        <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" class="w-7 h-7 rounded-full bg-[#FF0000] border border-[#FF0000] text-white flex items-center justify-center text-[10px] border-none"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/DrYiChen" target="_blank" class="w-8 h-8 rounded-full bg-[#1877F2] border border-[#1877F2] text-white flex items-center justify-center text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dryichen/" target="_blank" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center text-xs border-none"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.threads.net/@dryichen?xmt=AQF0z7S9JxdwySiWvVJpQuy23Yfz19tYffnSbgL4n7XeLcE" target="_blank" class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs border-none"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://youtube.com/@dryichen?si=w_6gcoQofAdZCu_R" target="_blank" class="w-8 h-8 rounded-full bg-[#FF0000] border border-[#FF0000] text-white flex items-center justify-center text-xs border-none"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
 
-            <nav class="w-full overflow-x-auto xl:overflow-visible py-0.5 md:py-2 desktop-overflow-visible text-center no-scrollbar">
+            <nav class="w-full overflow-x-auto xl:overflow-visible py-1.5 md:py-2 desktop-overflow-visible text-center no-scrollbar">
                 <ul class="inline-flex justify-center min-w-max gap-1 p-0.5 bg-slate-800/30 rounded-none md:rounded-full">
-                    <li><button onclick="switchTab('about')" id="nav-about" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all active">關於我們</button></li>
+                    <li><button onclick="switchTab('about')" id="nav-about" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all active">關於我們</button></li>
                     
-                    <li><button onclick="switchTab('weight-bone')" id="nav-weight-bone" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">減重與骨齡</button></li>
+                    <li><button onclick="switchTab('weight-bone')" id="nav-weight-bone" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">減重與骨齡</button></li>
                     
-                    <li><button onclick="switchTab('treatments')" id="nav-treatments" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">治療方式</button></li>
-                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">脊椎</button></li>
-                    <li><button onclick="switchTab('shoulder')" id="nav-shoulder" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">肩膀</button></li>
-                    <li><button onclick="switchTab('elbow')" id="nav-elbow" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手肘</button></li>
-                    <li><button onclick="switchTab('hand')" id="nav-hand" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手部</button></li>
-                    <li><button onclick="switchTab('hip')" id="nav-hip" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">髖臀</button></li>
-                    <li><button onclick="switchTab('knee')" id="nav-knee" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">膝蓋</button></li>
-                    <li><button onclick="switchTab('ankle')" id="nav-ankle" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">足踝</button></li>
-                    <li><button onclick="switchTab('booking')" id="nav-booking" class="nav-btn px-2.5 py-1 md:px-3 md:py-2 rounded-full text-xs md:text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all ml-1"><i class="fa-solid fa-calendar-check mr-1"></i> 預約</button></li>
+                    <li><button onclick="switchTab('treatments')" id="nav-treatments" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">治療方式</button></li>
+                    <li><button onclick="switchTab('spine')" id="nav-spine" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">脊椎</button></li>
+                    <li><button onclick="switchTab('shoulder')" id="nav-shoulder" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">肩膀</button></li>
+                    <li><button onclick="switchTab('elbow')" id="nav-elbow" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手肘</button></li>
+                    <li><button onclick="switchTab('hand')" id="nav-hand" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">手部</button></li>
+                    <li><button onclick="switchTab('hip')" id="nav-hip" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">髖臀</button></li>
+                    <li><button onclick="switchTab('knee')" id="nav-knee" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">膝蓋</button></li>
+                    <li><button onclick="switchTab('ankle')" id="nav-ankle" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-all">足踝</button></li>
+                    <li><button onclick="switchTab('booking')" id="nav-booking" class="nav-btn px-3.5 py-1.5 md:px-3 md:py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-neon transition-all ml-1"><i class="fa-solid fa-calendar-check mr-1"></i> 預約</button></li>
                 </ul>
             </nav>
 
